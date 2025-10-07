@@ -31,8 +31,8 @@ fun NavigationHost(
         }
         composable(NavRoutes.SLEEP_SCREEN.route) {
             SleepScreen(
-                nextScreen = {
-                    navHostController.navigate(NavRoutes.SLEEP_SCREEN.route)
+                nextScreen = { route ->
+                    navHostController.navigate(route)
                 }
             )
         }
