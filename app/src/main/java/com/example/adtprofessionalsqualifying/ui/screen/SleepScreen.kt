@@ -36,7 +36,6 @@ fun SleepScreen(
     )
 
     Box(modifier = Modifier.fillMaxSize()) {
-        // Верхний фон
         Image(
             painter = painterResource(id = R.drawable.top_sleep_screen),
             contentDescription = null,
@@ -46,7 +45,6 @@ fun SleepScreen(
             contentScale = ContentScale.Crop
         )
 
-        // Контент
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -74,7 +72,6 @@ fun SleepScreen(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Горизонтальный список категорий
                 LazyRow(
                     horizontalArrangement = Arrangement.spacedBy(16.dp),
                     contentPadding = PaddingValues(horizontal = 16.dp)
@@ -89,7 +86,6 @@ fun SleepScreen(
 
                 Spacer(modifier = Modifier.height(32.dp))
 
-                // Большой блок "The Ocean Moon"
                 Box(
                     modifier = Modifier
                         .padding(horizontal = 16.dp)
@@ -120,7 +116,7 @@ fun SleepScreen(
                             Spacer(modifier = Modifier.width(6.dp))
                             Text(
                                 text = "The Ocean Moon",
-                                color = colorScheme.primaryContainer, // нежно-желтый
+                                color = colorScheme.primaryContainer,
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -151,7 +147,6 @@ fun SleepScreen(
 
                 Spacer(modifier = Modifier.height(32.dp))
 
-                // Горизонтальный список карточек
                 LazyRow(
                     horizontalArrangement = Arrangement.spacedBy(16.dp),
                     contentPadding = PaddingValues(horizontal = 16.dp)
@@ -163,7 +158,6 @@ fun SleepScreen(
             }
         }
 
-        // Нижняя панель навигации
         BottomNavigationBar(
             modifier = Modifier.align(Alignment.BottomCenter),
             onNavigate = nextScreen

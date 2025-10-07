@@ -28,7 +28,6 @@ fun WelcomeScreen(
         modifier = Modifier
             .fillMaxSize()
     ) {
-        // Фоновое изображение
         Image(
             painter = painterResource(id = R.drawable.background),
             contentDescription = null,
@@ -36,7 +35,6 @@ fun WelcomeScreen(
             contentScale = ContentScale.Crop
         )
 
-        // Основное содержимое
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -69,7 +67,6 @@ fun WelcomeScreen(
                 )
             }
 
-            // Птички
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -86,7 +83,6 @@ fun WelcomeScreen(
                 )
             }
 
-            // Кнопка
             Button(
                 onClick = { nextScreen() },
                 modifier = Modifier
